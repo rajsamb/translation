@@ -1,4 +1,5 @@
-# Universal Angular Application
+# Angular 7 Universal Source
+https://github.com/enten/angular-universal
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
 
@@ -38,47 +39,6 @@ npm install
 npm start
 ```
 
-### Branches
-
-#### Branch [material](https://github.com/enten/angular-universal/tree/material)
-
-<div align="center">
-  <img alt="Preview of branch material" src="https://i.imgur.com/khXkDnA.png">
-</div>
-
-```shell
-git clone https://github.com/enten/angular-universal -b material my-project
-cd my-project
-npm install
-npm start
-```
-
-#### Branch [toh](https://github.com/enten/angular-universal/tree/toh)
-
-<div align="center">
-  <img alt="Preview of branch toh" src="https://i.imgur.com/T2TzP7t.png">
-</div>
-
-```shell
-git clone https://github.com/enten/angular-universal -b toh my-project
-cd my-project
-npm install
-npm start
-```
-
-#### Branch [i18n](https://github.com/enten/angular-universal/tree/i18n)
-
-<div align="center">
-  <img alt="Preview of branch i18n" src="https://i.imgur.com/6h2dkk7.png">
-</div>
-
-```shell
-git clone https://github.com/enten/angular-universal -b i18n my-project
-cd my-project
-npm install
-npm run start:fr
-```
-
 ## Development server
 
 Two different dev servers are provided:
@@ -106,10 +66,6 @@ The app will automatically reload if you change any of the browser source files.
 
 Note: the universal dev server provide an SPA mode too if you navigate to the `index.html`: [http://localhost:4000/index.html](http://localhost:4000/index.html).
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/app` directory.
@@ -123,7 +79,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
