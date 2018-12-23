@@ -72,6 +72,23 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 Run `npm run build:prod` for a production build.
 
+## To run SSR with pm2
+
+### Locally
+- Install pm2 globally: npm install -g pm2
+  [Might need to create alias on .zshrc or bashrc: alias pm2='/usr/local/Cellar/node/10.11.0/bin/pm2']
+
+- Build
+  - For locally `npm run build`
+  - For Production `npm run build:prod`
+  
+- pm2 start dist/app/server/main.js --name translation
+  
+      As ecosystem is setup:
+      - ON Local: pm2 start ecosystem/ecosystem.config.js --env=development
+      - On Poduciton: pm2 start ecosystem/ecosystem.config.production.js
+  
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
