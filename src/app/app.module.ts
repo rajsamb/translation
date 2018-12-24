@@ -4,12 +4,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-export const APP_ID = 'my-app';
+export const APP_ID = 'kritech-translation';
 
 @NgModule({
   imports: [
       BrowserModule.withServerTransition({ appId: APP_ID }),
+      FormsModule,
+      ReactiveFormsModule,
       HttpClientModule,
       AppRoutingModule,
   ],

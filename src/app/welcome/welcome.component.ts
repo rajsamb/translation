@@ -9,20 +9,22 @@ import { Translation } from '../services/translation';
   styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent {
-    title = 'Angular';
     translatedText: Translation;
 
-    constructor(
-        private http: HttpClient,
-        private translationService: TranslationService
-    ) {
-        const translation$ = this.translationService.loadTranslation('http://translateapi.howtofixthis.com/?sourceLanguage=en&targetLanguage=ta&text=I%20love%20tamil%20typing');
+    constructor(private translationService: TranslationService) {}
 
-        translation$.subscribe(
-            translation => this.translatedText = translation,
-            () => {},
-            () => console.log('translation complete!!')
-        );
+    public translate(event) {
+        if (event.code === 'Space' || event.code === 'Enter') {
+            const url = 'http://translateapi.howtofixthis.com/?sourceLanguage=en&targetLanguage=ne&text=' + encodeURI(event.target.value);
+            const translation$ = this.translationService.loadTranslation(url);
+
+            translation$.subscribe(
+                translation => this.translatedText = translation,
+                () => {
+                },
+                () => console.log('translation complete!!')
+            );
+        }
 
         /**
          * All in one without using translation service:

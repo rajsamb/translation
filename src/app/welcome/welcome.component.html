@@ -1,7 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to super translation
-  </h1>
-  <p [innerHtml]="translatedText"></p>
+<h1>
+Welcome to super translation
+</h1>
+    <div>
+        <textarea
+            id="fromTextarea"
+            (click)="translate($event)"
+            (keydown)="translate($event)"
+        ></textarea>
+    </div>
+
+    <div>
+        <textarea
+            id="toTextarea"
+            [innerHtml]="translatedText"
+        ></textarea>
+    </div>
 </div>
